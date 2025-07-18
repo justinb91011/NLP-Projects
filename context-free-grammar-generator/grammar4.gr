@@ -1,0 +1,178 @@
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are usually lowercase  (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars in questions 3 and 6, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But your *program* should still work with grammars that don't
+#      follow this convention.  So how can your program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+1	ROOT	S .
+1	ROOT	S !
+0.5	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+1 ROOT  Q ?                     # Adding yes-no question 
+
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#    S  = sentence
+#    NP = noun phrase
+#    VP_Past = verb phrase that only uses verbs that are in the past tense
+#    VP_Present = verb phrase that only uses verbs that are in the present tense 
+#    PP = prepositional phrase
+#    Det = determiner (sometimes called "article")
+#    Prep = preposition
+#    Adj = adjective
+#    Adv = adverb
+#    PN = pronoun
+#    IV = Intransitive Verb
+#    TV = Transitive Verb
+#    PV = Present Transitive Verb 
+#    PIV = Present Intransitive Verb
+#    WW = What words/interrogative words
+
+
+
+1   S    NP VP_Past
+0.2	S	   Comp S VP_Past
+
+# Add rules for yes-no question 
+1   Q   Aux NP VP_Present
+
+
+# Noun phrase rules
+5 NP   Det Noun
+1  NP   NP and NP
+0.8  NP   NP PP
+0.5  NP	  NP PP PP
+2.5  NP   PN
+
+# Verb phrase rules for past tense 
+1   VP_Past   TV NP
+1   VP_Past   IV
+1   VP_Past   TV NP and TV NP
+1	  VP_Past	 TV and TV NP
+1	  VP_Past	 TV Comp S 
+1	  VP_Past	 TV NP Comp S
+1	  VP_Past	 IV PP
+1   VP_Past   IV and IV  
+1   VP_Past   PN TV
+
+#  What word rules
+1   Q    WWPres Aux NP VP_Present
+
+#Problem with these two is that they act like transitive verbs
+1   Q    what Aux NP VP_Present 
+1   Q    what VP_Past
+1   Q    who VP_Past
+1   Q    who Aux NP VP_Present
+1   Q    who Aux VP_Present
+1   Q    what Aux NP VP_Present Prep
+1   Q  what Aux NP VP_Present Comp VP_Past
+# what did the president think that Sally ate
+
+
+# Verb phrase rules for present tense verbs 
+1   VP_Present   PV NP
+1   VP_Present   PIV
+1   VP_Present   PV
+1   VP_Present   PV NP and PV NP
+1	  VP_Present	 PV and PV NP
+1	  VP_Present	 PV Comp S
+1	  VP_Present	 PV NP Comp S
+1	  VP_Present	 PIV PP
+1   VP_Present   PIV and PIV
+
+
+# Prepositional phrase rules
+1  PP   Prep NP
+
+# Sentential complement rules
+1	Comp	that 
+
+# Add auxiliary verbs for yes-no questions
+1 Aux did
+1 Aux will 
+
+
+# Adjective rules
+.5   Noun  Adj Noun
+1    Adj  Adv Adj
+
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of 
+# terminals, like "chief of staff") is called a "preterminal."  Notice 
+# that a preterminal is a special kind of nonterminal.
+
+# Past tense verbs
+1	TV	ate
+1	TV	wanted
+1	TV	kissed
+1	TV	understood
+1	TV	pickled
+1 IV  sighed
+1 IV  worked
+1	TV	thought
+1	TV	perplexed 
+
+
+# Present tense verbs 
+1 PV  eat
+1 PV  want
+1 PV  kiss
+1 PV  understand
+1 PV  pickle
+1 PIV sigh
+1 PIV work
+1 PV  think
+1 PV  perplex
+
+
+1.5	Det	the
+0.5	Det	a
+0.5	Det	every
+0.3 Det that 
+
+
+1	Noun	president
+1	Noun	sandwich
+1	Noun	pickle
+1	Noun	chief of staff
+1	Noun	floor
+1 Noun  proposal
+1 Noun  desk
+
+1	Adj	fine
+1	Adj	delicious
+1	Adj	perplexed
+1	Adj	pickled
+
+
+1	Prep	with
+1	Prep	on
+1	Prep	under
+1	Prep	in
+
+
+1   Adv  very
+
+1.7   PN   Sally
+1   PN   it
+
+
+1  WWPres  where
+1  WWPres  when
+1  WWPres  why
