@@ -63,7 +63,7 @@ This project builds a part-of-speech tagger using Hidden Markov Models, learning
 ### 5. [`rnn-language-model`](./rnn-language-model)
 **Character-Level Neural Language Modeling**
 
-Step into the world of neural networks with this from-scratch implementation of a recurrent neural network. No fancy frameworks here - just pure NumPy and mathematical intuition. Watch as the network learns to predict characters one by one, eventually generating surprisingly coherent text.
+This project dives into the world of neural networks with a from-scratch implementation of a recurrent neural network. The network learns to predict characters one by one, eventually generating surprisingly coherent text.
 
 **Key Features:**
 - Complete RNN implementation with forward and backward passes
@@ -76,14 +76,10 @@ Step into the world of neural networks with this from-scratch implementation of 
 ### 6. [`blackbox-llm-prompting`](./blackbox-llm-prompting)
 **Modern Prompt Engineering & Retrieval-Augmented Generation**
 
-Large language models are powerful, but they need the right instructions. This project explores the art and science of prompt engineering, designing few-shot examples that guide model behavior. It also implements retrieval-augmented generation, combining external knowledge with model capabilities.
+This project explores the art and science of prompt engineering, designing few-shot examples that guide model behavior. It also implements retrieval-augmented generation, combining external knowledge with model capabilities.
 
 **Key Features:**
 - Carefully crafted prompts that elicit desired behaviors
 - RAG pipeline that grounds responses in external documents
 - Analysis of argument quality and reasoning patterns
 - Practical techniques for working with black-box APIs
-
----
-
-Each project includes detailed documentation, clean code, and thorough evaluation. Whether you're learning NLP fundamentals or exploring advanced techniques, these implementations provide both theoretical understanding and practical experience.
