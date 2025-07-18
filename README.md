@@ -24,7 +24,7 @@ This project builds context-free grammars from scratch, then adds probability to
 ### 2. [`smoothed-language-modeling`](./smoothed-language-modeling)
 **N-gram Models & Intelligent Text Classification**
 
-Language models predict what comes next - but what happens when they encounter words they've never seen? This project tackles the classic smoothing problem in NLP, building robust bigram and trigram models that gracefully handle unseen data. Plus, see these models in action as a spam detector that uses Bayes' theorem to classify messages.
+This project tackles the classic smoothing problem in NLP, building robust bigram and trigram models that gracefully handle unseen data. We use these models to act as a spam detector that uses Bayes' theorem to classify messages.
 
 **Key Features:**
 - Sophisticated smoothing techniques (Add-λ and backoff) that prevent zero probabilities
