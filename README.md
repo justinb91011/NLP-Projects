@@ -37,7 +37,7 @@ This project tackles the classic smoothing problem in NLP, building robust bigra
 ### 3. [`dependency-parser`](./dependency-parser)
 **Syntactic Structure & Dependency Relationships**
 
-Sentences aren't just bags of words - they're intricate webs of relationships. This project transforms traditional phrase-structure trees into dependency graphs, revealing the hidden connections between words. Using linguistic rules and heuristics, it identifies which words depend on which others.
+This project transforms traditional phrase-structure trees into dependency graphs, revealing the hidden connections between words. Using linguistic rules and heuristics, it identifies which words depend on which others.
 
 **Key Features:**
 - Conversion algorithms that preserve syntactic meaning
