@@ -50,7 +50,7 @@ This project transforms traditional phrase-structure trees into dependency graph
 ### 4. [`hmm-pos-tagger`](./hmm-pos-tagger)
 **Part-of-Speech Tagging with Hidden Markov Models**
 
-Words wear many hats - "run" can be a verb or a noun depending on context. This project builds a part-of-speech tagger using Hidden Markov Models, learning patterns from labeled data and using the Viterbi algorithm to make smart predictions about ambiguous words.
+This project builds a part-of-speech tagger using Hidden Markov Models, learning patterns from labeled data and using the Viterbi algorithm to make smart predictions about ambiguous words.
 
 **Key Features:**
 - HMM training on real linguistic data
