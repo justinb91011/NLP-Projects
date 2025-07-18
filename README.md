@@ -11,7 +11,7 @@ These projects span the full spectrum of NLP - from parsing sentence structure a
 ### 1. [`context-free-grammar-generator`](./context-free-grammar-generator)
 **Context-Free Grammars & Probabilistic Sentence Generation**
 
-Ever wondered how computers understand sentence structure? This project builds context-free grammars from scratch, then adds probability to create more realistic sentence generators. Watch as simple rules transform into complex syntax trees, and see how adding probabilities makes generated text feel more natural.
+This project builds context-free grammars from scratch, then adds probability to create more realistic sentence generators. 
 
 **Key Features:**
 - Hand-crafted grammar rules that capture English syntax
