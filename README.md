@@ -2,7 +2,7 @@
 
 A collection of Natural Language Processing projects exploring everything from traditional grammar rules to modern neural networks. Each project dives deep into core NLP techniques, implementing algorithms from scratch and working with real datasets to solve practical problems.
 
-These projects span the full spectrum of NLP - from parsing sentence structure and building language models to training neural networks and engineering prompts for large language models. Whether you're interested in the mathematical foundations or cutting-edge applications, there's something here to explore.
+These projects span the full spectrum of NLP - from parsing sentence structure and building language models to training neural networks and engineering prompts for large language models.
 
 ---
 
